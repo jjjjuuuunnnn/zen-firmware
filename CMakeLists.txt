@@ -1,0 +1,3 @@
+if(CONFIG_SHIELD_ZEN_LEFT OR CONFIG_SHIELD_ZEN_RIGHT)
+  zephyr_library()
+endif()

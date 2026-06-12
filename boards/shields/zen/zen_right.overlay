@@ -1,0 +1,32 @@
+#include "zen.dtsi"
+#include <input/processors.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
+
+/ {
+    scroll_scaler: scroll_scaler {
+        compatible = "zmk,input-processor-scaler";
+        #input-processor-cells = <2>;
+        type = <INPUT_EV_REL>;
+        codes = <INPUT_REL_WHEEL INPUT_REL_HWHEEL>;
+        track-remainders;
+    };
+};
+
+&pointing_listener {
+    input-processors =
+        <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
+        <&zip_temp_layer 1 500>;
+
+    scroller {
+        layers = <4>;
+        input-processors =
+            <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
+            <&zip_xy_to_scroll_mapper>,
+            <&scroll_scaler 1 28>;
+        process-next;
+    };
+};
+
+&zen_transform {
+    col-offset = <7>;
+};
