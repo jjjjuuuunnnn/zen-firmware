@@ -17,7 +17,7 @@ STLファイルは `stl/` に格納しています。
 - `zen-power-switch-v1.0.stl`
 - `zen-topplate-left-v1.0.stl`
 - `zen-topplate-right-v1.0.stl`
-- `zen-trackball-cover-PMW3610-v1.0.stl`
+- `zen-trackball-cover-PMW3610-v1.1.stl`
 - `zen-trackball-parts-PAW3222-v1.0.stl`
 - `zen-trackball-parts-PMW3610-v1.0.stl`
 - `zen-trackpad-cover-v1.0.stl`
